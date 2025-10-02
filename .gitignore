@@ -1,0 +1,84 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environment
+.venv/
+venv/
+ENV/
+env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Environment Variables
+.env
+
+# Data Files (large datasets)
+data/*.tsv
+data/*.csv
+*.tsv
+*.csv
+
+# Output Files
+output/*.xlsx
+output/*.xls
+*.xlsx
+*.xls
+~$*.xlsx
+
+# Logs
+*.log
+logs/
+
+# Cache
+.cache/
+*.cache
+
+# Jupyter Notebooks
+.ipynb_checkpoints/
+*.ipynb
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# Spotify cache
+.spotify_cache
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Keep directory structure
+!data/.gitkeep
+!output/.gitkeep
