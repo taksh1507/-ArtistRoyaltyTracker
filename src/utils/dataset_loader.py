@@ -30,11 +30,15 @@ class DatasetLoader:
         self.df = None
         self.isrc_column = None
         
+        # Create data directory if it doesn't exist
+        self.filepath.parent.mkdir(parents=True, exist_ok=True)
+        
     def check_file_exists(self) -> bool:
         """Check if dataset file exists and display info."""
         if not self.filepath.exists():
             print(f"❌ Dataset file not found: {self.filepath}")
             print(f"📁 Expected location: {self.filepath.parent}")
+            print(f"💡 Tip: Download the TSV file and place it in the 'data/' folder")
             return False
         
         file_size = self.filepath.stat().st_size

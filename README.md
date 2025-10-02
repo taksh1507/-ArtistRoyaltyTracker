@@ -5,7 +5,21 @@
 [![Python 3.8+](https://img.shields.io/badge/Python-3.8%2B-blue.svg)](https://www.python.org/)
 [![Production Ready](https://img.shields.io/badge/Status-Production%20Ready-success.svg)]()
 
-**ArtistRoyaltyTracker** is a Python tool that cross-references Spotify artist catalogs with the MLC unclaimed works database to identify potential royalty recovery opportunities.
+**ArtistRoyaltyTracker** is a Python tool that cross-references Spotify artist catalogs with the MLC (Mechanical Licensing Collective) unclaimed works database to identify potential royalty recovery opportunities.
+
+### 🎯 What It Does
+
+This tool automates the process of finding unclaimed mechanical royalties by:
+
+- **Fetching Artist Catalogs**: Retrieves complete discography from Spotify API using artist names
+- **ISRC Matching**: Cross-references International Standard Recording Codes (ISRCs) against 40M+ unclaimed works in the MLC database
+- **Smart Analysis**: Uses optimized hash-based lookups for instant matching across massive datasets (6.7 GB)
+- **Detailed Reports**: Generates Excel reports with matched tracks, metadata, and actionable insights
+- **Memory Efficient**: Processes multi-gigabyte files using only 500 MB RAM through intelligent chunking
+
+### 💰 Why It Matters
+
+Millions of dollars in mechanical royalties go unclaimed each year. Artists, labels, and rights holders may be missing out on revenue from streaming services. **ArtistRoyaltyTracker** helps identify these opportunities by scanning the MLC's public database of unmatched works, potentially recovering thousands in unclaimed earnings.
 
 ---
 
@@ -30,6 +44,8 @@ Get credentials: https://developer.spotify.com/dashboard
 ### 3. Add Dataset
 Download `unclaimedmusicalworkrightshares.tsv` (6.7GB) → place in `data/` folder  
 Source: https://www.themlc.com/
+
+> **Note:** The `data/` folder is automatically created when you run the project. Just place the TSV file there for scanning.
 
 ### 4. Run Analysis
 ```powershell
@@ -65,8 +81,8 @@ Report: output/artist_unclaimed_report.xlsx
 ```
 ArtistRoyaltyTracker/
 ├── config/settings.py           # Configuration
-├── data/*.tsv                   # MLC dataset (6.7GB)
-├── output/*.xlsx                # Reports
+├── data/*.tsv                   # MLC dataset (auto-generated, store TSV here)
+├── output/*.xlsx                # Reports (auto-generated)
 ├── src/
 │   ├── main.py                 # Orchestrator
 │   └── utils/                  # Core modules
@@ -77,6 +93,8 @@ ArtistRoyaltyTracker/
 ├── run_analysis.py             # CLI launcher
 └── requirements.txt            # Dependencies
 ```
+
+> **Auto-Generated Folders:** Both `data/` and `output/` folders are created automatically when running the analysis. Just download and place the TSV file in the `data/` directory.
 
 ---
 

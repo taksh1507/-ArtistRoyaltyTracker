@@ -32,6 +32,10 @@ class MusicRightsAnalyzer:
         """
         self.artist_name = artist_name
         self.output_path = output_path
+        
+        # Create output directory if it doesn't exist
+        self.output_path.parent.mkdir(parents=True, exist_ok=True)
+        
         self.dataset_loader = DatasetLoader()
         self.spotify_handler = SpotifyHandler()
         self.df_catalog = None
