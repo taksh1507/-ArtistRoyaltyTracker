@@ -14,12 +14,10 @@ Intership Project/
 ├── 📁 config/                              # ⚙️ Configuration Module
 │   └── settings.py                         # Centralized configuration settings
 │
-├── 📁 data/                                # 📊 Data Directory
-│   ├── .gitkeep                           # Keeps directory in git
+├── 📁 data/                                # 📊 Data Directory                      
 │   └── unclaimedmusicalworkrightshares.tsv # 6.7 GB dataset (gitignored)
 │
 ├── 📁 output/                              # 📈 Output Directory  
-│   ├── .gitkeep                           # Keeps directory in git
 │   └── artist_unclaimed_report.xlsx       # Generated Excel reports (gitignored)
 │
 ├── 📁 src/                                 # 💻 Source Code
